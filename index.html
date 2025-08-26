@@ -529,18 +529,25 @@
             padding: 20px;
         }
         
-        .modal-product-image {
-            background-color: var(--light-blue);
-            height: 300px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-blue);
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
+       .modal-product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;           /* ocupa todo el ancho disponible */
+  max-height: 400px;     /* ajusta según tu modal */
+  overflow: hidden;      /* evita scroll innecesario */
+  background: #f9f9f9;   /* opcional: fondo claro para contraste */
+  padding: 10px;         /* margen interno */
+  box-sizing: border-box;
+}
+
+#modalProductImage {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  object-fit: contain;   /* 🔑 asegura que no se recorte */
+}
+
         
         .modal-product-info h3 {
             color: var(--primary-blue);
@@ -1114,11 +1121,11 @@
                         <img src="Productos/JPG/MaestraCN3-100.jpg" alt="">
                     </div>
                     <div class="product-info">
-                        <h3>Cisterna 3,000 Lt</h3>
+                        <h3>Cisterna 3,500 Lt</h3>
                         <p>Ideal para uso residencial, fabricado con polietileno de alta densidad.</p>
                         <ul class="product-features">
-                            <li>Capacidad: 3,000 litros</li>
-                            <li>Resistente a impactos</li>
+                            <li>Capacidad: 3,500 litros</li>
+                            <li>Excelente bloqueo de rayos UV</li>
                             <li>Protección contra bacterias</li>
                             <li>Incluye tapa y kit de accesorios</li>
                         </ul>
@@ -1136,13 +1143,13 @@
                         <img src="Productos/JPG/MaestraCB3-100.jpg" alt="">
                     </div>
                     <div class="product-info">
-                        <h3>Cisterna 3,000 Lt</h3>
+                        <h3>Cisterna 3,500 Lt</h3>
                         <p>Perfecta para uso industrial y comercial, con refuerzos estructurales.</p>
                         <ul class="product-features">
-                            <li>Capacidad: 5000 litros</li>
-                            <li>Resistente a químicos</li>
+                            <li>Capacidad: 3,500 litros</li>
+                            <li>Ideal para uso residencial, fabricado con polietileno de alta densidad..</li>
                             <li>Diseño modular</li>
-                            <li>Fácil instalación</li>
+                            <li>Incluye tapa y kit de accesorios</li>
                         </ul>
                         <div class="product-price"></div>
                         <div class="product-actions">
@@ -1158,13 +1165,13 @@
                         <img src="Productos/JPG/MaestraCA3-100.jpg" alt="">
                     </div>
                     <div class="product-info">
-                        <h3>Cisterna 3,000 LtL</h3>
+                        <h3>Cisterna 3,500 LtL</h3>
                         <p>Solución económica sin sacrificar calidad, perfecto para familias pequeñas.</p>
                         <ul class="product-features">
-                            <li>Capacidad: 750 litros</li>
-                            <li>Diseño compacto</li>
-                            <li>Fácil instalación</li>
-                            <li>Garantía de 5 años</li>
+                            <li>Capacidad: 3,500 litros</li>
+                            <li>Mayor protección contra rayos UV.</li>
+                            <li>Controla algas y bacterias.</li>
+                            <li>Incluye tapa y kit de accesorios.</li>
                         </ul>
                         <div class="product-price"></div>
                         <div class="product-actions">
@@ -1180,12 +1187,11 @@
                     </div>
                     <div class="product-info">
                         <h3>Cisterna 5,000 Lt</h3>
-                        <p>Mantén tu agua purificada con nuestro sistema de filtrado de 3 etapas.</p>
+                        <p>Para residencias grandes o consumo elevado, asegura suministro confiable de agua.</p>
                         <ul class="product-features">
-                            <li>Filtración de 3 etapas</li>
-                            <li>Elimina sedimentos y bacterias</li>
-                            <li>Fácil mantenimiento</li>
-                            <li>Compatibilidad universal</li>
+                            <li>Excelente bloqueo de rayos UV</li>
+                            <li>Protección contra bacterias</li>
+                            <li>Incluye tapa y kit de accesorios</li>
                         </ul>
                         <div class="product-price"></div>
                         <div class="product-actions">
@@ -1200,17 +1206,17 @@
                     </div>
                     <div class="product-info">
                         <h3>Cisterna 5,000 Lt</h3>
-                        <p>Solución económica sin sacrificar calidad, perfecto para familias pequeñas.</p>
+                        <p>Para residencias grandes o consumo elevado, asegura suministro confiable de agua.</p>
                         <ul class="product-features">
-                            <li>Capacidad: 750 litros</li>
-                            <li>Diseño compacto</li>
-                            <li>Fácil instalación</li>
-                            <li>Garantía de 5 años</li>
+                            <li>Capacidad: 5,000 litros</li>
+                            <li>Ideal en climas muy cálidos.</li>
+                            <li>Diseño modular.</li>
+                            <li>Incluye tapa y kit de accesorios.</li>
                         </ul>
                         <div class="product-price"></div>
                         <div class="product-actions">
                             <a href="#contacto" class="btn">Cotizar</a>
-                            <button class="btn btn-outline view-details" data-product="3">Detalles</button>
+                            <button class="btn btn-outline view-details" data-product="5">Detalles</button>
                         </div>
                     </div>
                 </div>
@@ -1220,17 +1226,17 @@
                     </div>
                     <div class="product-info">
                         <h3>Cisterna 5,000 Lt</h3>
-                        <p>Solución económica sin sacrificar calidad, perfecto para familias pequeñas.</p>
+                        <p>Para residencias grandes o consumo elevado, asegura suministro confiable de agua.</p>
                         <ul class="product-features">
-                            <li>Capacidad: 750 litros</li>
-                            <li>Diseño compacto</li>
-                            <li>Fácil instalación</li>
-                            <li>Garantía de 5 años</li>
+                            <li>Capacidad: 5,000 litros.</li>
+                            <li>Mayor protección contra rayos UV.</li>
+                            <li>Controla algas y bacterias.</li>
+                            <li>Incluye tapa y kit de accesorios.</li>
                         </ul>
                         <div class="product-price"></div>
                         <div class="product-actions">
                             <a href="#contacto" class="btn">Cotizar</a>
-                            <button class="btn btn-outline view-details" data-product="3">Detalles</button>
+                            <button class="btn btn-outline view-details" data-product="6">Detalles</button>
                         </div>
                     </div>
                 </div>
@@ -1243,15 +1249,15 @@
                         <h3>Tinaco 1,200 Lt</h3>
                         <p>Solución económica sin sacrificar calidad, perfecto para familias pequeñas.</p>
                         <ul class="product-features">
-                            <li>Capacidad: 750 litros</li>
-                            <li>Diseño compacto</li>
-                            <li>Fácil instalación</li>
-                            <li>Garantía de 5 años</li>
+                            <li>Capacidad: 1,200 litros.</li>
+                            <li>Diseño compacto.</li>
+                            <li>Excelente bloqueo de rayos UV.</li>
+                            <li>Incluye tapa y kit de accesorios.</li>
                         </ul>
                         <div class="product-price"></div>
                         <div class="product-actions">
                             <a href="#contacto" class="btn">Cotizar</a>
-                            <button class="btn btn-outline view-details" data-product="3">Detalles</button>
+                            <button class="btn btn-outline view-details" data-product="7">Detalles</button>
                         </div>
                     </div>
                 </div>
@@ -1264,15 +1270,15 @@
                         <h3>Tinaco 1,200 Lt</h3>
                         <p>Solución económica sin sacrificar calidad, perfecto para familias pequeñas.</p>
                         <ul class="product-features">
-                            <li>Capacidad: 750 litros</li>
+                            <li>Capacidad: 1,200 litros</li>
                             <li>Diseño compacto</li>
-                            <li>Fácil instalación</li>
-                            <li>Garantía de 5 años</li>
+                            <li>Refleja gran parte del calor, manteniendo el agua más fresca.</li>
+                            <li>Incluye tapa y kit de accesorios</li>
                         </ul>
                         <div class="product-price"></div>
                         <div class="product-actions">
                             <a href="#contacto" class="btn">Cotizar</a>
-                            <button class="btn btn-outline view-details" data-product="3">Detalles</button>
+                            <button class="btn btn-outline view-details" data-product="8">Detalles</button>
                         </div>
                     </div>
                 </div>
@@ -1288,9 +1294,10 @@
                 <button class="close-modal">&times;</button>
             </div>
             <div class="modal-body">
-                <div class="modal-product-image" id="modalProductImage">
-                    Imagen del producto
-                </div>
+                <div class="modal-product-image">
+  <img id="modalProductImage" src="" alt="Imagen del producto" style="max-width:100%; height:auto; border-radius:8px;">
+</div>
+
                 <div class="modal-product-info">
                     <h3 id="modalProductName">Nombre del Producto</h3>
                     <p id="modalProductDescription">Descripción detallada del producto.</p>
@@ -1398,7 +1405,7 @@
                     </div>
                 </div>
                 
-                <div class="distributor-card">
+                <!-- <div class="distributor-card">
                     <div class="distributor-img">
                         <img src="Estados/Zac.png" alt="">
                     </div>
@@ -1414,7 +1421,7 @@
                             <button class="btn view-map" data-location="Zacatecas Capital" data-title="Aqualine Zacatecas" data-address="Calz. Independencia 890" data-phone="(33) 5555-1234" data-hours="Lun-Vie: 8:30am-5:00pm">Ver Mapa</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -1522,7 +1529,7 @@
                             <div>
                                 <h3>Horario</h3>
                                 
-                                <p> Lunes a Viernes: 9:00 am - 6:00 pm<br>Sábados: 9:00 am - 2:00 pm</p>
+                                <p> Lunes a Viernes: 8:00 am - 5:00 pm<br>Sábados: 8:00 am - 1:00 pm</p>
                                 
                             </div>
                         </div>
@@ -1573,7 +1580,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 AquaStorage. Todos los derechos reservados.</p>
+                <p>&copy; 2025 Aqualine. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
@@ -1698,60 +1705,111 @@
             // Product data
             const products = {
                 1: {
-                    name: 'Tinaco Rotoplas 1100L',
-                    description: 'Ideal para uso residencial, fabricado con polietileno de alta densidad que garantiza durabilidad y resistencia. Perfecto para familias medianas y grandes.',
+                    name: 'Cisterna Color Negro 3,500 L.',
+                    description: 'Ideal para uso residencial, fabricado con polietileno virgen de alta densidad.',
                     features: [
-                        'Capacidad: 1100 litros',
-                        'Material: Polietileno de alta densidad',
-                        'Resistente a impactos y cambios de temperatura',
-                        'Protección contra bacterias y algas',
-                        'Incluye tapa segura y base de soporte',
-                        'Garantía: 10 años'
+                        'Capacidad: 3,500 litros.',
+                        'Material: Polietileno virgen de alta densidad.',
+                        'Excelente bloqueo de rayos UV.',
+                        'Protección contra bacterias y algas.',
+                        'Incluye tapa y kit de accesorios.',
+                        
                     ],
-                    price: '$3,499.00 MXN',
-                    image: 'Tinaco Rotoplas 1100L'
+                    price: '',
+                    image: "Productos/JPG/MaestraCN3-100.jpg"
+                    
                 },
                 2: {
-                    name: 'Cisterna Industrial 5000L',
-                    description: 'Diseñada para uso industrial y comercial, con refuerzos estructurales que garantizan máxima resistencia. Ideal para restaurantes, hoteles y pequeñas industrias.',
+                    name: 'Cisterna Color Blanco 3,500 L.',
+                    description: 'Ideal para uso residencial, fabricado con polietileno virgen de alta densidad.',
                     features: [
-                        'Capacidad: 5000 litros',
-                        'Material: Polietileno de grado alimenticio',
-                        'Resistente a químicos y corrosión',
-                        'Diseño modular para fácil instalación',
-                        'Incluye sistema de filtrado integrado',
-                        'Garantía: 15 años'
+                        'Capacidad: 3,500 litros.',
+                        'Material: Polietileno virgen de grado alimenticio.',
+                        'Diseño modular.',
+                        'Incluye tapa y kit de accesorios.',
+                        
                     ],
-                    price: '$12,799.00 MXN',
-                    image: 'Cisterna Industrial 5000L'
+                    price: '',
+                    image: 'Productos/JPG/MaestraCB3-100.jpg'
                 },
                 3: {
-                    name: 'Tinaco Económico 750L',
-                    description: 'Solución económica sin sacrificar calidad, perfecto para familias pequeñas o como respaldo en caso de cortes de agua. Fácil instalación y mantenimiento.',
+                    name: 'Cisterna Color Azul 3,500 L.',
+                    description: 'Ideal para uso residencial, fabricado con polietileno virgen de alta densidad.',
                     features: [
-                        'Capacidad: 750 litros',
-                        'Material: Polietileno de alta resistencia',
-                        'Diseño compacto para espacios reducidos',
-                        'Fácil instalación y mantenimiento',
-                        'Incluye tapa con seguro',
-                        'Garantía: 5 años'
+                        'Capacidad: 3,500 litros.',
+                        'Material: Polietileno virgen de alta resistencia.',
+                        'Mayor protección contra rayos UV.',
+                        'Controla algas y bacterias.',
+                        '>Incluye tapa y kit de accesorios.',
+                        
                     ],
-                    price: '$2,199.00 MXN',
-                    image: 'Tinaco Económico 750L'
+                    price: '',
+                    image: 'Productos/JPG/MaestraCA3-100.jpg'
                 },
                 4: {
-                    name: 'Sistema de Filtrado Premium',
-                    description: 'Mantén tu agua purificada con nuestro sistema de filtrado de 3 etapas que elimina sedimentos, bacterias y mejora el sabor del agua. Compatible con todos nuestros tinacos y cisternas.',
+                    name: 'Cisterna Color Negro 5,000 L.',
+                    description: 'Para residencias grandes o consumo elevado, asegura suministro confiable de agua.',
                     features: [
-                        'Filtración de 3 etapas: sedimentos, carbón activado y bacteriológica',
-                        'Elimina el 99.9% de bacterias y sedimentos',
-                        'Fácil mantenimiento con cartuchos reemplazables',
-                        'Compatibilidad universal con todos nuestros productos',
-                        'Incluye kit de instalación completo',
-                        'Garantía: 3 años'
+                        'Capacidad: 5,000 litros.',
+                        'Excelente bloqueo de rayos UV.',
+                        'Protección contra bacterias.',
+                        'Incluye tapa y kit de accesorios.',
+                    
                     ],
-                    price: '$4,299.00 MXN',
-                    image: 'Sistema de Filtrado Premium'
+                    price: '',
+                    image: 'Productos/JPG/MaestraCN5-100.jpg'
+                },
+                5: {
+                    name: 'Cisterna Color Blanco 5,000 L.',
+                    description: 'Para residencias grandes o consumo elevado, asegura suministro confiable de agua.',
+                    features: [
+                        'Capacidad: 3,500 litros.',
+                        'Ideal en climas muy cálidos.',
+                        'Diseño modular.',
+                        'Incluye tapa y kit de accesorios.',
+                        
+                    ],
+                    price: '',
+                    image: 'Productos/JPG/MaestraCB5-100.jpg'
+                },
+                6: {
+                    name: 'Cisterna Color Negro 5,000 L.',
+                    description: 'Para residencias grandes o consumo elevado, asegura suministro confiable de agua.',
+                    features: [
+                        'Capacidad: 5,000 litros.',
+                        'Mayor protección contra rayos UV.',
+                        'Controla algas y bacterias.',
+                        'Incluye tapa y kit de accesorios.',
+                    
+                    ],
+                    price: '',
+                    image: 'Productos/JPG/MaestraCA5-100.jpg'
+                },
+                7: {
+                    name: 'Tinaco Color Negro 1,200 L.',
+                    description: 'Solución económica sin sacrificar calidad, perfecto para familias pequeñas.',
+                    features: [
+                        'Capacidad: 1,200 litros.',
+                        'Diseño compacto.',
+                        'Excelente bloqueo de rayos UV.',
+                        'Incluye tapa y kit de accesorios.',
+                        
+                    ],
+                    price: '',
+                    image: 'Productos/JPG/MaestraTN-100.jpg'
+                },
+                8: {
+                    name: 'Tinaco Color Beige 1,200 L.',
+                    description: 'Solución económica sin sacrificar calidad, perfecto para familias pequeñas.',
+                    features: [
+                        'Capacidad: 1,200 litros.',
+                        'Diseño compacto.',
+                        'Excelente bloqueo de rayos UV.',
+                        'Incluye tapa y kit de accesorios.',
+                        
+                    ],
+                    price: '',
+                    image: 'Productos/JPG/MaestraTB-100.jpg'
                 }
             };
             
@@ -1766,7 +1824,8 @@
                         document.getElementById('modalProductName').textContent = product.name;
                         document.getElementById('modalProductDescription').textContent = product.description;
                         document.getElementById('modalProductPrice').textContent = product.price;
-                        document.getElementById('modalProductImage').textContent = product.image;
+                        document.getElementById('modalProductImage').src = product.image;
+
                         
                         // Clear previous features
                         const featuresContainer = document.getElementById('modalProductFeatures');
@@ -1873,11 +1932,11 @@
         
         // Social links functionality
         document.querySelectorAll('.social-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                // Social links already have target="_blank", so they will open in new tab
-            });
-        });
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // evita el comportamiento por defecto
+        window.open(this.href, '_blank'); // abre el enlace en nueva pestaña
+    });
+});
     </script>
 </body>
 </html>
