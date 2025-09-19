@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aqualine | Soluciones en Almacenamiento de Agua</title>
+    <title>Aqualine</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="favicon_io (3)/android-chrome-192x192.png">
     <style>
@@ -41,7 +41,7 @@
         
         /* Header */
         header {
-            background-color: var(--white);
+            background-color: #0066a6;
             box-shadow: var(--shadow);
             position: sticky;
             top: 0;
@@ -59,6 +59,46 @@
             display: flex;
             align-items: center;
         }
+        /* Enlaces del menú */
+header nav ul li a {
+  color: #ffffff;         
+  text-decoration: none;  
+  position: relative;     /* Necesario para el subrayado animado */
+  transition: color 0.3s;
+}
+
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;           /* Distancia del texto */
+  width: 0%;
+  height: 2px;
+  background-color: #66b2ff; /* Azul clarito */
+  transition: width 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #66b2ff; /* Cambia el color al hover */
+}
+
+header nav ul li a:hover::after {
+  width: 100%; /* Hace crecer la línea */
+}
+
+/* Icono del botón menú */
+.mobile-menu-btn i {
+  color: #ffffff;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.mobile-menu-btn i:hover {
+  color: #66b2ff;
+}
+
+
+
         
         .logo-circle {
   width: 80px;       /* Tamaño del círculo */
@@ -75,6 +115,19 @@
   width: 100%;       /* Ajusta la imagen al ancho del círculo */
   height: 100%;      /* Ajusta la imagen al alto del círculo */
   object-fit: cover; /* Hace que la imagen se recorte y llene el círculo sin deformarse */
+}
+.logo-rectangle {
+  width: 240px;          /* Ancho del rectángulo */
+  height: 160px;          /* Alto del rectángulo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0066a6; /* Fondo azul */
+}
+
+.logo-rectangle img {
+  max-width: 100%;   /* La imagen no se sale del contenedor */
+  max-height: 100%;  /* Se ajusta en altura también */
 }
 
         
@@ -102,6 +155,7 @@
             text-decoration: none;
             color: var(--dark-gray);
             font-weight: 500;
+            font-size: 25px;    /* aquí ajustas el tamaño */
             transition: var(--transition);
             position: relative;
         }
@@ -1005,27 +1059,32 @@
     <!-- Header -->
     <header>
         <div class="container header-container">
-            
-            <div class="logo">
-                <div class="logo-circle">
-                  <img src="favicon_io (3)/android-chrome-192x192.png" alt="Logo">
-                </div>
-                <div class="logo-text">Aqua<span>line</span></div>
-              </div>
+  <!-- Logo -->
+  <div class="logo">
+    <div class="logo-circle">
+      <img src="favicon_io (3)/android-chrome-512x512.png" alt="Logo">
+    </div>
+    <div class="logo-rectangle">
+      <img src="1x/letrasRecurso 2.png" alt="Logo">
+    </div>
+  </div>
 
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav>
-                <ul id="navMenu">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#beneficios">Beneficios</a></li>
-                    <li><a href="#productos">Productos</a></li>
-                    <li><a href="#distribuidores">Distribuidores</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+  <!-- Menú -->
+  <nav>
+    <ul id="navMenu">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#beneficios">Beneficios</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#distribuidores">Distribuidores</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Botón móvil -->
+  <button class="mobile-menu-btn" id="mobileMenuBtn">
+    <i class="fas fa-bars"></i>
+  </button>
+</div>
     </header>
 
     <!-- Hero Section with Carousel -->
@@ -1140,7 +1199,7 @@
                 <div class="product-card">
                     <div class="product-img">
                         <div class="product-badge">Nuevo</div>
-                        <img src="Productos/JPG/MaestraCB3-100.jpg" alt="">
+                        <img src="Productos/JPG/MaestraCB3-100.png.jpg" alt="">
                     </div>
                     <div class="product-info">
                         <h3>Cisterna 3,500 Lt</h3>
@@ -1183,7 +1242,7 @@
                 
                 <div class="product-card">
                     <div class="product-img">
-                        <img src="Productos/JPG/MaestraCN5-100.jpg" alt="">
+                        <img src="Productos/JPG/MaestraCN5-100.png" alt="">
                     </div>
                     <div class="product-info">
                         <h3>Cisterna 5,000 Lt</h3>
@@ -1202,7 +1261,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-img">
-                        <img src="Productos/JPG/MaestraCB5-100.jpg" alt="">
+                        <img src="Productos/JPG/MaestraCB5-100.png" alt="">
                     </div>
                     <div class="product-info">
                         <h3>Cisterna 5,000 Lt</h3>
@@ -1222,7 +1281,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-img">
-                        <img src="Productos/JPG/MaestraCA5-100.jpg" alt="">
+                        <img src="Productos/JPG/MaestraCA5-100.png" alt="">
                     </div>
                     <div class="product-info">
                         <h3>Cisterna 5,000 Lt</h3>
@@ -1351,9 +1410,28 @@
             </div>
             
             <div class="distributors-grid">
+
                 <div class="distributor-card">
                     <div class="distributor-img">
-                        <img src="Estados/coa.png" alt="">
+                        <img src="Estados/Pinos.png" alt="">
+                    </div>
+                    <div class="distributor-info">
+                        <h3>Central Aqualine</h3>
+                        <div class="distributor-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Pinos, Zacatecas</span>
+                        </div>
+                        <p>+(52) 496-119-4760</p>
+                        <div class="distributor-contact">
+                            <a href="#contacto" class="btn">Contactar</a>
+                            <button class="btn view-map" data-location="Pinos, Zacatecas" data-title="Central Aqualine" data-address="Pinos, Zacatecas" data-hours="Lun-Sáb: 8:00 am-5:00 pm">Ver Mapa</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="distributor-card">
+                    <div class="distributor-img">
+                        <img src="Estados/coahuila.png" alt="">
                     </div>
                     <div class="distributor-info">
                         <h3>Aqualine Coahuila</h3>
@@ -1371,7 +1449,7 @@
                 
                 <div class="distributor-card">
                     <div class="distributor-img">
-                        <img src="Estados/SLP.webp" alt="">
+                        <img src="Estados/San Luis.png" alt="">
                     </div>
                     <div class="distributor-info">
                         <h3>EAO. Marcelina Perez Moreno</h3>
@@ -1389,7 +1467,7 @@
 
                 <div class="distributor-card">
                     <div class="distributor-img">
-                        <img src="Estados/SLP.webp" alt="">
+                        <img src="Estados/San Luis.png" alt="">
                     </div>
                     <div class="distributor-info">
                         <h3>Salvador Aranda</h3>
@@ -1404,6 +1482,62 @@
                         </div>
                     </div>
                 </div>
+<!--
+                <div class="distributor-card">
+                    <div class="distributor-img">
+                        <img src="Estados/Zacatecas.png" alt="">
+                    </div>
+                    <div class="distributor-info">
+                        <h3>Juan Perez</h3>
+                        <div class="distributor-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Aguascalientes Capital</span>
+                        </div>
+                        <p>+(52) 444-848-4229</p>
+                        <div class="distributor-contact">
+                            <a href="#contacto" class="btn">Contactar</a>
+                            <button class="btn view-map" data-location="Boulevard Rio Españita S/N Esquina Reforma Agraria, Nuestra Señora de la Salud CP.78398" data-title="Aqualine San Luis Potosí Capital" data-address="Boulevard Rio Españita S/N Esquina Reforma Agraria, Nuestra Señora de la Salud CP.78398" data-phone="+(52) 444-848-4229" data-hours="Lun-Sáb: 8:00 am-5:00 pm">Ver Mapa</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="distributor-card">
+                    <div class="distributor-img">
+                        <img src="Estados/Zacatecas.png" alt="">
+                    </div>
+                    <div class="distributor-info">
+                        <h3>Juan Perez</h3>
+                        <div class="distributor-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Aguascalientes Capital</span>
+                        </div>
+                        <p>+(52) 444-848-4229</p>
+                        <div class="distributor-contact">
+                            <a href="#contacto" class="btn">Contactar</a>
+                            <button class="btn view-map" data-location="Boulevard Rio Españita S/N Esquina Reforma Agraria, Nuestra Señora de la Salud CP.78398" data-title="Aqualine San Luis Potosí Capital" data-address="Boulevard Rio Españita S/N Esquina Reforma Agraria, Nuestra Señora de la Salud CP.78398" data-phone="+(52) 444-848-4229" data-hours="Lun-Sáb: 8:00 am-5:00 pm">Ver Mapa</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="distributor-card">
+                    <div class="distributor-img">
+                        <img src="Estados/Zacatecas.png" alt="">
+                    </div>
+                    <div class="distributor-info">
+                        <h3>Juan Perez</h3>
+                        <div class="distributor-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Aguascalientes Capital</span>
+                        </div>
+                        <p>+(52) 444-848-4229</p>
+                        <div class="distributor-contact">
+                            <a href="#contacto" class="btn">Contactar</a>
+                            <button class="btn view-map" data-location="Boulevard Rio Españita S/N Esquina Reforma Agraria, Nuestra Señora de la Salud CP.78398" data-title="Aqualine San Luis Potosí Capital" data-address="Boulevard Rio Españita S/N Esquina Reforma Agraria, Nuestra Señora de la Salud CP.78398" data-phone="+(52) 444-848-4229" data-hours="Lun-Sáb: 8:00 am-5:00 pm">Ver Mapa</button>
+                        </div>
+                    </div>
+                </div>
+
+                -->
                 
                 <!-- <div class="distributor-card">
                     <div class="distributor-img">
